@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Order</title>
+</head>
+<body>
+
+  <form action="">
+    <fieldset>
+      <legend>Personal info</legend>
+      <label>
+        Full Name
+        <input type="text" name="name">
+      </label>
+      <label>
+        Phone number
+        <input type="tel" name="tel">
+      </label>
+      <label>
+        Email
+        <input type="email" name="email">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Address</legend>
+      <label>
+        Country
+        <select name="country">
+          <option value="Ukraine">Ukraine</option>
+          <option value="Poland">Poland</option>
+        </select>
+      </label>
+      <label>
+        City
+        <select name="city">
+          <option value="Kiev">Kiev</option>
+          <option value="Lviv">Lviv</option>
+        </select>
+      </label>
+      <label>
+        Street
+        <input type="text" name="street">
+      </label>
+      <label>
+        Building
+        <input type="text" name="building">
+      </label>
+      <label>
+        Apartment
+        <input type="number" name="apartment">
+      </label>
+    </fieldset>
+
+
+
+    <button type="submit">Send</button>
+  </form>
+
+</body>
+</html>
