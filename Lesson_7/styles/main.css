@@ -1,0 +1,23 @@
+.heading {
+  text-decoration: underline;
+  color: green;
+  font-weight: 500;
+}
+
+.heading-secondary {
+  font-size: 18px;
+}
+
+
+.font-big {
+  font-size: 22px;
+}
+
+.container {
+  width: 970px;
+  padding: 16px;
+}
+
+.bg-gray {
+  background-color: gray;
+}
