@@ -1,0 +1,23 @@
+* {
+  font-size: 15px;
+}
+
+.list .list-item {
+  margin-bottom: 12px;
+}
+
+.list > .list-item {
+  color: aqua;
+}
+
+.list ~ p {
+  color: green;
+}
+
+.list + p {
+  color: blueviolet;
+}
+
+/* input:checked {
+
+} */

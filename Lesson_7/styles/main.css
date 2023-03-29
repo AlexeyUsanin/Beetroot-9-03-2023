@@ -1,3 +1,22 @@
+body {
+  font-size: 18px;
+  color: #070707;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* p {
+  font-size: 18px;
+} */
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .heading {
   text-decoration: underline;
   color: green;
@@ -8,16 +27,24 @@
   font-size: 18px;
 }
 
-
 .font-big {
   font-size: 22px;
 }
 
 .container {
   width: 970px;
-  padding: 16px;
+  /* height: 100%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bg-gray {
-  background-color: gray;
+  background-color: #F6F6F6;
+}
+
+.title {
+  font-size: 1em;
+  line-height: 46px;
+  text-align: center;
+  margin: 0 0 50px 0;
 }
