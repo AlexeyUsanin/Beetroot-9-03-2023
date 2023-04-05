@@ -7,6 +7,28 @@
   margin: 0 auto;
 }
 
+.button {
+
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section--design {
+  background-image: url(../images/Figma.svg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
 .card-wrapper {
   font-size: 0;
   margin-bottom: 40px;
