@@ -1,0 +1,63 @@
+.color {
+  color: rebeccapurple;
+}
+
+.font-size {
+  font-size: 16px;
+}
+
+.font-weight {
+  font-weight: 500;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+.font-style {
+  font-style: 'italic';
+}
+
+.text-decoration {
+  text-decoration-color: blueviolet;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-style: wavy;
+}
+
+.text-transform {
+  text-transform: capitalize;
+}
+
+.text-align {
+  width: 300px;
+  text-align: justify;
+}
+
+.letter-spacing {
+  letter-spacing: 3px;
+}
+
+
+.white-space {
+  white-space: nowrap;
+}
+
+.text-shadow{
+  text-shadow: 2px 1px 1px red;
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-indent {
+  text-indent: 50px;
+}
+
+.font-variant {
+  font-variant: 'normal';
+}
