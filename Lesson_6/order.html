@@ -12,27 +12,74 @@
 </head>
 
 <body>
-  <div class="container">
 
+  <header class="header">
+    <div class="content">
+      <div class="logo">ITLife</div>
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--font-bold">
+            <a class="menu__link" href="">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">About</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card__image">
+
+      </div>
+    </div>
+
+    <div class="card">
+
+    </div>
+
+    <div class="card">
+
+    </div>
+
+
+
+  </div>
+
+  <section class="section section--bg-gray">
+
+  </section>
+
+  <section class="section section--bg-white section--wide">
+
+  </section>
+
+
+  <div class="container">
 
   <form action="" id="form" class="form">
 
     <fieldset>
-    <legend>Personal info</legend>
-    <div class="form__row">
-      <label class="form__label">
-          Full Name
-        <input class="form__input" type="text" name="name" required pattern="[a-z]{4,10}" autofocus placeholder="Type name...">
-      </label>
-      <label class="form__label">
-        Phone number
-        <input class="form__input" type="tel" name="tel" required pattern="[0-9]{8}" value="" >
-      </label>
-      <label class="form__label">
-        Email
-        <input class="form__input" type="email" name="email" required disabled value="sdfsf@ddf">
-      </label>
-    </div>
+      <legend>Personal info</legend>
+      <div class="form__row">
+        <label class="form__label">
+            Full Name
+          <input class="form__input" type="text" name="name" required pattern="[a-z]{4,10}" autofocus placeholder="Type name...">
+          <span class="error-text">This field is required</span>
+        </label>
+        <label class="form__label">
+          Phone number
+          <input class="form__input" type="tel" name="tel" required pattern="[0-9]{8}" value="" >
+        </label>
+        <label class="form__label">
+          Email
+          <input class="form__input" type="email" name="email" required disabled value="sdfsf@ddf">
+        </label>
+      </div>
     </fieldset>
 
     <fieldset>
@@ -47,10 +94,10 @@
             <option selected value="Poland">Poland</option>
           </select>
         </label>
-        <label class="form__label">
+        <label class="form__label form__label--select">
           City
 
-          <select name="city" required>
+          <select name="city" required class="form__input form__select">
             <option value="" selected>Select city</option>
             <option value="Kiev">Kiev</option>
             <option value="Lviv">Lviv</option>
@@ -58,15 +105,15 @@
         </label>
         <label class="form__label">
           Street
-          <input type="text" name="street" required>
+          <input class="form__input" type="text" name="street" required>
         </label>
         <label class="form__label">
           Building
-          <input type="text" name="building" required>
+          <input class="form__input" type="text" name="building" required>
         </label>
         <label class="form__label">
           Apartment
-          <input type="number" name="apartment" required min="1" max="100">
+          <input class="form__input" type="number" name="apartment" required min="1" max="100">
         </label>
       </div>
     </fieldset>
@@ -74,88 +121,115 @@
     <fieldset>
       <legend>Payment method</legend>
       <div class="form__row">
-        <div class="form__row">
-          <label>
-            Cash
-            <input checked type="radio" name="payment" value="cash" required>
-          </label>
-          <label>
-            Card
-            <input type="radio" name="payment" value="card" required>
-          </label>
-        </div>
+        <label class="form__radio">
+          <input checked type="radio" name="payment" value="cash" required>
+          <span class="checkmark"> </span>
+          Cash
+        </label>
+        <label  class="form__radio">
+          <input type="radio" name="payment" value="card" required>
+          <span class="checkmark"> </span>
+          Card
+        </label>
+      </div>
         <div class="form__row">
           <label  class="form__label">
             Card Number
-            <input type="number" name="card-number" required placeholder="0000 0000 0000 0000">
+            <input  class="form__input" type="number" name="card-number" required placeholder="0000 0000 0000 0000">
           </label>
           <label  class="form__label">
             Card Date
-            <input type="date" name="card-date" required>
+            <input  class="form__input" type="date" name="card-date" required>
           </label>
           <label  class="form__label">
             CVV
-            <input type="number" name="card-cvv" required>
+            <input class="form__input" type="number" name="card-cvv" required>
           </label>
         </div>
-    </div>
     </fieldset>
 
     <fieldset>
       <legend>Delivery</legend>
       <div class="form__row">
-        <label>
+        <label class="form__label">
           Delivery Date
-          <input type="date" name="delivery-date" required>
+          <input class="form__input" type="date" name="delivery-date" required>
         </label>
-        <label>
+        <label class="form__label">
           Delivery Time
-          <input type="time" name="delivery-time" required>
+          <input class="form__input" type="time" name="delivery-time" required>
         </label>
       </div>
       <br>
       <div>
         <div class="form__row">
-          <label>
+          <label >
             Delivery Days
           </label>
         </div>
-        <label>
-          Monday
-          <input type="checkbox" checked name="delivery-days" value="Monday">
-        </label>
-        <label>
-          Tuesday
-          <input type="checkbox" checked name="delivery-days" value="Tuesday">
-        </label>
-        <label>
-          Wensday
-          <input type="checkbox" name="delivery-days" value="Wensday">
-        </label>
-        <label>
-          Thurday
-          <input type="checkbox" name="delivery-days" value="Thurday">
-        </label>
-        <label>
-          Friday
-          <input type="checkbox" name="delivery-days" value="Friday">
-        </label>
+        <div class="form__row">
+          <label class="form__radio form__checkbox">
+            <input type="checkbox" checked name="delivery-days" value="Monday">
+            <span class="checkmark"></span>
+            Monday
+          </label>
+          <label class="form__radio form__checkbox">
+            <input type="checkbox" checked name="delivery-days" value="Tuesday">
+            <span class="checkmark"></span>
+            Tuesday
+          </label>
+          <label class="form__radio form__checkbox">
+            <input type="checkbox" name="delivery-days" value="Wensday">
+            <span class="checkmark"></span>
+            Wensday
+          </label>
+          <label class="form__radio form__checkbox">
+            <input type="checkbox" name="delivery-days" value="Thurday">
+            <span class="checkmark"></span>
+            Thurday
+          </label>
+          <label class="form__radio form__checkbox">
+            <input type="checkbox" name="delivery-days" value="Friday">
+            <span class="checkmark"></span>
+            Friday
+          </label>
+
+        </div>
       </div>
 
       <label class="form__label">
         Delivery comment
         <div>
-          <textarea placeholder="Type comment...." name="comment" cols="50" rows="5"></textarea>
+          <textarea class="form__input textarea" placeholder="Type comment...." name="comment" cols="50" rows="5"></textarea>
         </div>
       </label>
     </fieldset>
 
-    <button type="reset">Reset Form</button>
-    <button type="submit">Send</button>
+    <button class="button button--outline" type="reset">Reset Form</button>
+    <button class="button" type="submit">Send</button>
   </form>
 
 
+
 </div>
+<footer class="footer">
+  <div class="content">
+    <nav class="menu menu--light">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="">Home</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+
+
   <script>
     document.querySelector('#form').addEventListener('submit',e => {
       e.preventDefault()
