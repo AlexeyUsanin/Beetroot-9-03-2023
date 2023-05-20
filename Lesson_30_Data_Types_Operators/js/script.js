@@ -168,25 +168,28 @@ console.log(!1);
 
 // console.log('isEven :>> ', isEven);
 
-const operand1 = Number.parseFloat(prompt('Operand 1'));
-const operand2 = Number.parseFloat(prompt('Operand 2'));
-const sign = prompt('Enter Sign');
-let result = null;
+// const operand1 = Number.parseFloat(prompt('Operand 1'));
+// const operand2 = Number.parseFloat(prompt('Operand 2'));
+// const sign = prompt('Enter Sign');
+// let result = null;
 
-console.log('sign :>> ', sign);
+// console.log('sign :>> ', sign);
 
-switch (sign) {
-  case '+':
-    result = operand1 + operand2;
-    alert(`result ${result}`);
-    break;
-  case '-':
-    result = operand1 - operand2;
-    alert(`result ${result}`);
-    break;
-  case '*':
-    result = operand1 * operand2;
-    alert(`result ${result}`);
-  default:
-    alert('Is not correct sign');
-}
+// switch (sign) {
+//   case '+':
+//     result = operand1 + operand2;
+//     alert(`result ${result}`);
+//     break;
+//   case '-':
+//     result = operand1 - operand2;
+//     alert(`result ${result}`);
+//     break;
+//   case '*':
+//     result = operand1 * operand2;
+//     alert(`result ${result}`);
+//   default:
+//     alert('Is not correct sign');
+// }
+
+
+const totalSales = prompt('enter total sum')
