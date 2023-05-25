@@ -80,3 +80,8 @@ console.log(checkAge(20, showMessage));
 const minus = (a, b) => a - b;
 
 console.log(minus(10, 7));
+
+
+console.log(calcSum(1, 2, 4, 7, 9))
+
+findNumbersInRange(1, 100, 'even')
