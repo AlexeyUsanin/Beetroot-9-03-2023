@@ -246,16 +246,46 @@ function filterByRole(array, role) {
   })
 }
 
-function convertNameToUpperCase(array) {
+
+function sortByBought() {
+
+}
+
+
+const products = [ { name: 'Apple', bought: false, quantity: 3, price: 30 }, { name: 'Orange' } ]
+
+function convertNameToUpperCase(array, name) {
+  // [...array]
   return array.map(function (el) {
-    return {
-      ...el,
-      name: el.name.toUpperCase(),
-      // age: el.age,
-      // role: el.role
+    const clonedObj = { ...el };
+    // const clonedObj = Object.assign({}, el);
+
+
+    if (clonedObj.name === name && !el.bought) {
+      return {
+        ...clonedObj,
+        bought: true
+        quantity: quantity + 2
+        sum: el.price * el.quantity
+      }
     }
+
+    // return { sum: el.price * el.quantity  }
+
+    return el
+
+    // return {
+    //   ...el,
+    //   name: el.name.toUpperCase(),
+    //   // age: el.age,
+    //   // role: el.role
+    // }
   })
 }
+
+
+
+buyProduct([], 'Apple');
 
 // {
 //   name: 'table',
@@ -267,3 +297,6 @@ console.log('filterByAge :>> ', filterByAge(user, 30));
 console.log('filterByRole :>> ', filterByRole(user, 'teacher'));
 
 console.log('convertNameToUpperCase :>> ', convertNameToUpperCase(user));
+
+
+const boughtItem = shoppingList.map(obj => !obj.status && obj.name === name  ? { ...obj, status: true } : obj);
