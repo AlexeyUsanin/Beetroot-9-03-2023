@@ -8,9 +8,14 @@ $(function () {
     centerMode: true,
     centerPadding: '60px',
     arrows: false,
-    // prevArrow: $('#prev'),
-    // nextArrow: $('#next'),
+    prevArrow: $('#prev'),
+    nextArrow: $('#next'),
     dots: true
+  });
 
-  })
+  $('.vertical-slider').slick({
+    vertical: true,
+    arrows: false,
+    dots: true
+  });
 })

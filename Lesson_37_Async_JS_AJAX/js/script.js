@@ -77,6 +77,17 @@ function checkAge(age) {
 
 console.log('Console 1');
 
+// console.clear()
+// fetch('https://jsonplaceholder.typicode.com/usrs').then(function(response) {
+//   console.log('response :>> ', response);
+//   return response.json()
+// }).then((data) => {
+
+// }).catch((error) => {
+//   alert('Error')
+// })
+
+console.clear()
 const promise = new Promise(function (resolve, reject) {
   if (checkAge(19)) {
     resolve('Success!');
@@ -112,7 +123,7 @@ console.log('Console 5');
 ///////// Fetch ////////
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
-const request = fetch(`${API_URL}/posts`);
+const request = fetch(`${API_URL}/post`);
 let posts = [];
 
 function renderPost(post) {
@@ -157,10 +168,22 @@ function renderPostList(data) {
 }
 
 request.then(response => {
-  return response.json()
+  console.log('response :>> ', response);
+  if (!response.ok) {
+    if (response.status === 404) {
+      throw new Error('Not found! Try later!');
+    }
+
+    alert(`Error: ${response.status}`);
+  }
+
+  return response.json();
 }).then(data => {
+
   renderPostList(data);
 }).catch(error => {
+  alert(error)
+
   console.log('request error :>> ', error);
 })
 
@@ -171,7 +194,8 @@ fetch('data.json')
   .then(function (response) {
     console.log('Response data.json', response)
     return response.json();
-}).then(function (data) {
+  })
+  .then(function (data) {
   console.log('data.json :>> ', data);
 });
 
