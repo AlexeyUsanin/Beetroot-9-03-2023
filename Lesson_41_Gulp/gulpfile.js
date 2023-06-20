@@ -17,7 +17,6 @@ function cssMinify() {
     .pipe(dest('src/css'))
 }
 
-
 function compileJS() {
   return src('src/js/*.js')
     .pipe(concat('main.js'))
@@ -32,7 +31,6 @@ function liveReload() {
   watch('src/scss/**/*.scss', compileScss);
   watch("src/*.html").on('change', browserSync.reload);
 }
-
 
 function buildHTML() {
   return src('src/*.html').pipe(dest('build'));
@@ -57,4 +55,3 @@ exports.cssMinify = cssMinify;
 exports.js = compileJS;
 exports.scss = compileScss;
 exports.default = liveReload;
-
