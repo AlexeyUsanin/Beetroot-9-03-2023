@@ -2,6 +2,8 @@ export function greeting() {
   alert('Hello, user!')
 }
 
-export function sayBye() {
+function sayBye() {
   alert('Bye Bye!')
 }
+
+export default sayBye;

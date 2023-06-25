@@ -1,5 +1,5 @@
 import $ from "jquery";
-import { greeting, sayBye } from './greeting';
+import { greeting } from './greeting';
 
 export function renderButton() {
   const button = $('<button>Button</button>');
