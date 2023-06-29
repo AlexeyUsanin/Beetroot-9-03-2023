@@ -1,0 +1,27 @@
+.button {
+  font-size: 16px;
+  padding: 4px 12px;
+  color: #fff;
+  background-color: rgb(85, 10, 155);
+
+  // &--primary {
+  //   background-color: rgb(85, 10, 155);
+  // }
+
+  &--secondary {
+    background-color: rgb(101, 9, 41);
+  }
+}
+
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.orange {
+  background-color: orange;
+}

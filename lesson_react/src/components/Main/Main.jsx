@@ -1,5 +1,6 @@
 import Card from '../Card/Card';
 import Container from '../Container/Container';
+import Button from '../Button/Button';
 
 const data1 = {
   title: 'Card title 1',
@@ -16,10 +17,17 @@ const data3 = {
   text: 'Card 3',
 }
 
-
 const Main = () => (
   <main>
     <Container>
+
+      <Button>Main button</Button>
+
+      <Button color="secondary">Secondary button</Button>
+      <Button color="red">Red button</Button>
+      <Button color="purple">Purple button</Button>
+      <Button color="orange">Orange button</Button>
+
       text
       <h1>
         Main title

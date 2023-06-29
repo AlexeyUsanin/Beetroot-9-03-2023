@@ -1,5 +1,14 @@
+import Dropdown from '../Dropdown/Dropdown';
+
+const nav = [
+  'Home',
+  'Photos',
+  'About'
+]
+
 const Navigation = () => {
   return (
+    <>
     <nav>
       <ul>
         <li>
@@ -19,6 +28,8 @@ const Navigation = () => {
         </li>
       </ul>
     </nav>
+      <Dropdown list={nav} label="Menu" />
+    </>
   )
 }
 
