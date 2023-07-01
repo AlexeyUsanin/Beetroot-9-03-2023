@@ -1,6 +1,6 @@
 import './button.scss';
 
-const Button = ({ children, color }) => {
+const Button = ({ children, color, type }) => {
   let buttonColor = '';
 
   switch (color) {
@@ -20,7 +20,7 @@ const Button = ({ children, color }) => {
   return (
     // <button className={`button ${color === 'secondary' ? 'button--secondary' : ''}`}>  {children}
     // </button>
-    <button className={`button ${buttonColor}`}>{children}</button>
+    <button type={type} className={`button ${buttonColor}`}>{children}</button>
   )
 }
 

@@ -6,14 +6,14 @@ const list = [
   'Add to Favourite'
 ]
 
-const Card = ({ title, text }) => {
+const Card = ({ title, text, alt, src }) => {
   return (
-    <div className="card">
+    <li className="card">
       <h3>{title}</h3>
-      <img src={imgCoffee} alt="Coffee" className="card__image"/>
+      <img src={src} alt={alt} className="card__image"/>
       <p className="card__text">{text}</p>
       <Dropdown list={list} label="Show options" />
-    </div>
+    </li>
   )
 }
 

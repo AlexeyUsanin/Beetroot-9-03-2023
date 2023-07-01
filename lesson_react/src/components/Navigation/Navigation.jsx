@@ -1,35 +1,26 @@
-import Dropdown from '../Dropdown/Dropdown';
-
-const nav = [
-  'Home',
-  'Photos',
-  'About'
-]
+import './navigation.scss';
 
 const Navigation = () => {
   return (
-    <>
-    <nav>
-      <ul>
-        <li>
-          <a href="/home">
+    <nav className="nav">
+      <ul className="nav__list">
+        <li className="nav__list-item">
+          <a href="/home" className='nav__list-link'>
             Home
           </a>
         </li>
-        <li>
-          <a href="/photos">
+        <li className="nav__list-item">
+          <a href="/photos" className='nav__list-link'>
             Photos
           </a>
         </li>
-        <li>
-          <a href="/about">
+        <li className="nav__list-item">
+          <a href="/about" className='nav__list-link'>
             About
           </a>
         </li>
       </ul>
     </nav>
-      <Dropdown list={nav} label="Menu" />
-    </>
   )
 }
 

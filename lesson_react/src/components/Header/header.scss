@@ -2,6 +2,20 @@
 
 .header {
   width: 100%;
-  padding: 40px;
-  background-color: $main_color;
+  padding: 16px 0;
+  border-bottom: 1px solid $main_color;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 150px;
+
+    img {
+      width: 100%;
+    }
+  }
 }

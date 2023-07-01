@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+
+    &-link {
+      text-decoration: none;
+      color: $main_color;
+      font-size: 18px;
+
+      &:hover {
+        color: lighten($main_color, 20);
+      }
+    }
+  }
+}
