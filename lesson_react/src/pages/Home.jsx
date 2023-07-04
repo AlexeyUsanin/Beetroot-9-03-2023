@@ -3,30 +3,74 @@ import Layout from '../layout/MainLayout';
 import Hero from '../components/Hero/Hero';
 import Form from '../components/SearchForm/SearchForm';
 import List from '../components/List/List';
-
-const API_KEY = process.env.REACT_APP_API_KEY
+import photoService from '../service/photo';
 
 const Home = () => {
   const [data, setData] = useState({})
 
   useEffect(() => {
-    fetch('https://api.pexels.com/v1/curated?api_key=per_page=1', {
-      method: 'GET',
-      headers: {
-        Authorization: API_KEY
-      }
-    })
-      .then(response => response.json())
-      .then(data => setData(data))
+    // fetch('https://api.pexels.com/v1/curated?api_key=per_page=1', {
+    //   method: 'GET',
+    //   headers: {
+    //     Authorization: API_KEY
+    //   }
+    // })
+    //   .then(response => response.json())
+    //   .then(data => setData(data))
+
+    // api.request('GET', 'v1/curated?api_key=per_page=1').then(data => {
+    //   setData(data)
+    // })
+
+    const getPhoto = async () => {
+      const data = await photoService.getCurated();
+
+      setData(data)
+    }
+
+    getPhoto()
   }, [])
 
-  console.log('data :>> ', data);
+
+  const makeSearch = async (query) => {
+    // fetch(`https://api.pexels.com/v1/search?query=${query}`, {
+    //   method: 'GET',
+    //   headers: {
+    //     Authorization: API_KEY
+    //   }
+    // })
+    //   .then(response => response.json())
+    //   .then(data => setData(data))
+    //   .catch(error => console.log('error :>> ', error))
+
+    // try {
+    //   const response = await fetch(`https://api.pexels.com/v1/search?query=${query}`, {
+    //     method: 'GET',
+    //     headers: {
+    //       Authorization: API_KEY
+    //     }
+    //   });
+    //   const data = await response.json();
+
+    //   setData(data)
+    // } catch (error) {
+    //   alert(error);
+    // }
+
+    try {
+      const data = await photoService.searchPhoto(query)
+
+      setData(data)
+    } catch (error) {
+      alert(error);
+    }
+  }
 
   return (
     <Layout>
       <Hero>
         <h1 className='title'>Homepage</h1>
-        <Form />
+        <Form onSubmit={makeSearch} />
       </Hero>
 
       {data.photos && <List data={data} />}

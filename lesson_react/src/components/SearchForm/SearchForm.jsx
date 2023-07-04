@@ -1,25 +1,47 @@
+import React from 'react';
 import Input from '../Input/Input.hook';
 import Button from '../Button/Button';
 import './searchForm.scss';
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useFormik } from 'formik';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-const SearchForm = () => {
-  const [value, setValue] = useState('')
+const SearchForm = ({ onSubmit }) => {
+  // const [value, setValue] = useState('')
+  const formik = useFormik({
+    initialValues: {
+      search: 'cat',
+    },
+    onSubmit: values => {
+      console.log('values :>> ', values);
+      // alert(JSON.stringify(values, null, 2));
+      onSubmit(values.search)
+    },
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
 
-    console.log('value :>> ', value);
-  }
+  //   onSubmit(value);
 
-  const handleChange = (event) => {
-    setValue(event.target.value)
-  }
+  //   console.log('value :>> ', value);
+  // }
+
+  // const handleChange = (event) => {
+  //   setValue(event.target.value)
+  // }
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form' onSubmit={formik.handleSubmit}>
       <div className='form__field'>
-        <Input onChange={handleChange} value={value} />
+        <input
+          id="search"
+          name="search"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.search}
+        />
+        {/* <Input onChange={handleChange} value={value} /> */}
         <Button type="submit">Search</Button>
       </div>
     </form>
