@@ -1,19 +1,25 @@
-import imgCoffee from '../../images/coffee.png';
-import Dropdown from '../Dropdown/Dropdown';
+import { Link } from 'react-router-dom'
+import CardMUI from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 
-const list = [
-  'Download',
-  'Add to Favourite'
-]
-
-const Card = ({ title, text, alt, src }) => {
+const Card = ({ title, text, alt, src, id }) => {
   return (
-    <li className="card">
-      <h3>{title}</h3>
-      <img src={src} alt={alt} className="card__image"/>
-      <p className="card__text">{text}</p>
-      <Dropdown list={list} label="Show options" />
-    </li>
+    <Link to={`/photos/${id}/`}>
+      <CardMUI sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 240 }}
+          image={src}
+        title={alt}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        </CardContent>
+      </CardMUI>
+    </Link>
   )
 }
 

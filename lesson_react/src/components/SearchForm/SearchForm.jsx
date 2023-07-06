@@ -1,8 +1,6 @@
 import React from 'react';
-import Input from '../Input/Input.hook';
 import Button from '../Button/Button';
 import './searchForm.scss';
-// import { useState } from 'react';
 import { useFormik } from 'formik';
 // import { Formik, Form, Field, ErrorMessage } from 'formik';
 
@@ -10,7 +8,7 @@ const SearchForm = ({ onSubmit }) => {
   // const [value, setValue] = useState('')
   const formik = useFormik({
     initialValues: {
-      search: 'cat',
+      search: '',
     },
     onSubmit: values => {
       console.log('values :>> ', values);

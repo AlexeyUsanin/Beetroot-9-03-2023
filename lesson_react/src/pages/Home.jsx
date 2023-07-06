@@ -4,6 +4,7 @@ import Hero from '../components/Hero/Hero';
 import Form from '../components/SearchForm/SearchForm';
 import List from '../components/List/List';
 import photoService from '../service/photo';
+import Container from '../components/Container/Container';
 
 const Home = () => {
   const [data, setData] = useState({})
@@ -73,7 +74,9 @@ const Home = () => {
         <Form onSubmit={makeSearch} />
       </Hero>
 
-      {data.photos && <List data={data} />}
+      <Container>
+        {data.photos && <List data={data} />}
+      </Container>
     </Layout>
   )
 }

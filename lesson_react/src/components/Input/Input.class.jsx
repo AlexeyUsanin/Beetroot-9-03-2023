@@ -17,6 +17,17 @@ class Input extends React.Component {
     })
   }
 
+  // componentDidMount() {
+  //   fetch()
+  // }
+
+  // componentDidUpdate(prevProps, nextProps) {
+  //   if (prevProps.id !== nextProps.id) {
+  //     fetch(id);
+  //   }
+  // }
+
+
   render() {
     return (
       <label>

@@ -14,6 +14,11 @@ const photoService = {
     const data = await api.request('GET', `v1/search?query=${query}`);
 
     return data;
+  },
+  getPhoto: async(id) => {
+    const data = await api.request('GET', `v1/photos/${id}`)
+
+    return data;
   }
 }
 

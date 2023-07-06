@@ -13,6 +13,10 @@
       color: $main_color;
       font-size: 18px;
 
+      &.active {
+        border-bottom: 2px solid $main_color;
+      }
+
       &:hover {
         color: lighten($main_color, 20);
       }

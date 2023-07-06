@@ -1,5 +1,4 @@
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_URL = 'https://api.pexels.com/';
+import { API_KEY, API_URL } from '../constants'
 
 const api = {
   baseURL: API_URL,
