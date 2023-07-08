@@ -22,4 +22,11 @@
       }
     }
   }
+
+  &--dark {
+
+    .nav__list-link {
+      color: #fff;
+    }
+  }
 }

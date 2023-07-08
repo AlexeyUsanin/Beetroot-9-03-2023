@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Layout from '../layout/MainLayout';
 import Hero from '../components/Hero/Hero';
 import Form from '../components/SearchForm/SearchForm';
 import List from '../components/List/List';
 import photoService from '../service/photo';
 import Container from '../components/Container/Container';
+import { ThemeContext } from '../App';
 
 const Home = () => {
   const [data, setData] = useState({})
+  const theme = useContext(ThemeContext);
+
+  console.log('theme :>> ', theme);
 
   useEffect(() => {
     // fetch('https://api.pexels.com/v1/curated?api_key=per_page=1', {

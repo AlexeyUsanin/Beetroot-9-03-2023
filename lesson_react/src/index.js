@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from './pages/Home';
-import ErrorPage from './pages/NotFound';
-import Photos from './pages/Photos';
-import Photo from './pages/Photo';
+import App from './App';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -15,26 +12,10 @@ import './styles/index.scss';
 
 import reportWebVitals from './reportWebVitals';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/photos",
-    element: <Photos />,
-  },
-  {
-    path: "/photos/:photoId",
-    element: <Photo />,
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 
